@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row order">
+        <div class="col-12 h3 text-center my-3">
+            Profile
+        </div>
+        <div class="col-12 col-lg-8 mx-auto">
+            <div class="card">
+                <form action="/profile/" method="post">
+                    {% csrf_token%}
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <input type="text" placeholder="First Name" name="firstname"
+                                value="{{profile.user.first_name}}">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Last Name" name="lastname"
+                                value="{{profile.user.last_name}}">
+                        </div>
+                        <div class=" col-12">
+                            <textarea type="text" placeholder="Address" name="address">{{profile.address}}</textarea>
+                        </div>
+                        <button type="submit" class="btn orderbtn">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

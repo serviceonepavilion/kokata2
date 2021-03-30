@@ -1,0 +1,377 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.navbar {
+    background-color: #FF7A00;
+    width: 100%;
+
+    .cartbtn {
+        display: none;
+        cursor: pointer;
+
+        i {
+            color: #fff;
+        }
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+
+
+    }
+
+    .badge {
+        padding-left: 9px;
+        padding-right: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+    }
+
+    .label-warning[href],
+    .badge-warning[href] {
+        background-color: #c67605;
+    }
+
+    #totalcart {
+        font-size: 12px;
+        background: #ff0000;
+        color: #fff;
+        padding: 0 5px;
+        vertical-align: top;
+        margin-left: -10px;
+    }
+}
+
+.cartitems {
+    .item {
+        height: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .menucard {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .total {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 10px;
+        margin: 10px 2px;
+
+        div {
+            font-size: 1.2rem;
+        }
+
+        span {
+            float: right;
+        }
+
+        .checkout {
+            padding: 10px 20px;
+            background-color: #FF7A00;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .empty {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+
+.home {
+    .col-12 {
+        height: 50vh;
+    }
+
+    .background {
+        background-image: url(../img/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .features {
+        height: calc(50vh - 56px);
+        background-color: #2C1E15;
+    }
+
+    .main {
+        width: 50%;
+        text-align: center;
+        font-weight: 600;
+        font-weight: 600;
+        font-size: 24px;
+
+        div {
+            padding: 15px 0px;
+            margin: 10px 0px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        div:nth-child(1) {
+            background-color: #FF7A00;
+            color: white;
+        }
+
+        div:nth-child(2) {
+            border: 2px solid #FF7A00;
+            color: #FF7A00;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+    }
+
+    .login {
+        width: 50%;
+        display: none;
+    }
+
+    .title {
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+        margin: 5px 0px;
+    }
+
+    .no {
+        padding: 10px;
+        width: 100%;
+        border: 4px solid #FF7A00;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .continue {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        background-color: #FF7A00;
+        font-size: 1.5rem;
+        color: white;
+        border-radius: 5px;
+        margin: 10px 0px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .back {
+        font-size: 1.2rem;
+        margin: 10px 0px 0px -10px;
+        cursor: pointer;
+        display: inline-block;
+    }
+}
+
+.menucard {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 0px;
+    margin: 10px 2px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+
+    .menu-detail {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .menu-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+
+    }
+
+    .menu-price {
+        opacity: 0.8;
+    }
+
+    .addcart {
+        color: #60B246;
+        font-weight: bolder;
+        margin: 10px 0px;
+        padding: 5px;
+        text-align: center;
+        box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+        width: 70px;
+        cursor: pointer;
+        user-select: none;
+
+        .ctrlcart {
+            display: none;
+
+            #cartcount {
+                margin: 0px 10px;
+
+            }
+        }
+    }
+}
+
+.order {
+    .card {
+        box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+        padding: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        margin: 10px 0px;
+        padding: 5px 5px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .orderbtn {
+        background-color: #FF7A00;
+        color: #fff;
+        margin: 20px 10px;
+        width: 40%;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 10px 20px;
+        float: right;
+        margin-left: auto;
+    }
+
+    .total {
+
+        div {
+            font-size: 1.2rem;
+        }
+
+        span {
+            float: right;
+        }
+
+        .checkout {
+            padding: 10px 20px;
+            background-color: #FF7A00;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.shopclose {
+    text-align: center;
+    margin-top: calc((100vh - 56px)/2 - (79px/2));
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.banner {
+    height: 200px;
+    background-color: #2C1E15;
+    // background: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orders {
+    .noorders {
+        padding: 50px 50px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .cancelorder {
+        background-color: #F32731;
+        color: white;
+        display: inline;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        .cartbtn {
+            display: block;
+        }
+    }
+
+    .col-12 {
+        height: auto;
+    }
+
+    .home {
+        .background {
+            height: calc(60vh);
+        }
+
+        .menu {
+            height: calc(40vh);
+        }
+
+        .main {
+            width: 80%;
+
+            div {
+                padding: 10px 0px;
+                margin: 5px 0px;
+
+            }
+        }
+
+        .login {
+            width: 80%;
+        }
+
+    }
+
+    .menucard {
+        .menu-title {
+            font-size: 1rem;
+        }
+    }
+
+    .order {
+        .card {
+            margin: 10px 5px;
+            padding: 0px 10px;
+        }
+
+        .orderbtn {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+}

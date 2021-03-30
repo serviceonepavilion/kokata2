@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="home row">
+        <div class="col-12 col-lg-6 background"></div>
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center menu">
+            <div class="main">
+                <div><a href="/">View Menu</a></div>
+                <div>Login</div>
+            </div>
+            <div class="login">
+                <div class="back"><i class="fas fa-chevron-left"></i></div>
+                <div class="title">LOGIN</div>
+                <div class="subtitle">Enter your phone number to proceed</div>
+                <form action="otp/" method="post">
+                    {% csrf_token %}
+                    <input type="text" class="no" placeholder="Phone Number" name="mobileno">
+                    <button class="btn continue" type="submit">CONTINUE</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 features d-none d-lg-block">
+
+        </div>
+    </div>
+</div>
+{% endblock body %}
+{% block script %}
+<script>
+    const main = document.querySelector('.main');
+    const loginBtn = document.querySelector('.main div:nth-child(2)');
+    const login = document.querySelector('.login');
+    const back = document.querySelector('.back');
+    loginBtn.addEventListener('click', () => {
+        main.style.display = "none";
+        login.style.display = "block";
+
+    });
+
+    back.addEventListener('click', () => {
+        main.style.display = "block";
+        login.style.display = "none";
+    })
+</script>
+{% endblock script %}

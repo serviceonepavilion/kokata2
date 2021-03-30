@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<!-- brown Banner  -->
+<div class="banner">
+
+</div>
+<!-- brown Banner Ends  -->
+<div class="container">
+    <div class="row ">
+        <div class="h1 col-12 col-lg-12 my-3">
+            Recommended
+        </div>
+        <!-- Menu Starts -->
+        {% for menu in menus %}
+        <div class="col-12 col-lg-6 item{{menu.id}} ">
+            <div class="menucard row">
+                <div class="col-4">
+                    <img src="{{menu.image}}" alt="">
+                </div>
+                <div class="col-8">
+                    <div class="menu-detail">
+                        <div>
+                            <div class="menu-title">
+                                {{menu.name}}
+                            </div>
+                            <div class="menu-price">
+                                ₹<span class="price">{{menu.price}}</span>
+                            </div>
+                        </div>
+                        <div id="{{menu.id}}" class="addcart">
+                            <div class="ctrlcart">
+                                <span id="minus">-</span><span id="cartcount">0</span><span id="plus">+</span>
+                            </div>
+                            <div class="add">
+                                ADD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+        <!-- Menu Card Ends -->
+    </div>
+</div>
+{% endblock body %}
+{% block script %}
+<script>
+    updateAddCartButton();
+    totalCartUpdate();
+</script>
+{% endblock script%}

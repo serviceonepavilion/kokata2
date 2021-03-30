@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row order">
+        <div class="col-12 h3 text-center my-3">
+            Check Out
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <form action="/placeorder/" method="post">
+                    {% csrf_token%}
+                    <h5 class="card-title py-3">Shipping Address</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" placeholder="First Name" name="firstname"
+                                value="{{profile.user.first_name}}">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Last Name" name="lastname"
+                                value="{{profile.user.last_name}}">
+                        </div>
+                        <div class=" col-12">
+                            <textarea type="text" placeholder="Address" name="address">{{profile.address}}</textarea>
+                        </div>
+                        <input type="text" name="totalprice"></input>
+                        <input class="cart" name="cart"></input>
+                        <div class="title">Select Payment Option:</div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="cod" id="paytm" value="0">
+                            <label class="form-check-label" for="paytm">
+                                Paytm
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="cod" id="cod" value="1">
+                            <label class="form-check-label" for="cod">
+                                Cash On Delivery
+                            </label>
+                        </div>
+                        <button type="submit" class="btn orderbtn">Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4">
+        <div class="card">
+            <h5 class="card-title py-3">PRICE DETAILS </h5>
+            <div class="total">
+                <div class="price">Price Details : <span class="totalprice">0</span></div>
+                <div class="delivery">Delivery Fee : <span class="text-success">FREE</span></div>
+                <hr>
+                <div class="delivery">Total Price : <span class="totalprice">0</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock body %}
+{% block script %}
+<script>
+    updateAddCartButton();
+    totalCartUpdate();
+    document.querySelector('input[name="totalprice"]').value = localStorage.getItem('totalprice')
+    document.querySelector('input[name="totalprice"]').style.display = "none"
+    document.querySelector('.cart').value = localStorage.getItem('cart')
+    document.querySelector('.cart').style.display = "none"
+</script>
+{% endblock script %}

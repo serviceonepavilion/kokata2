@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+<div class="container cartitems">
+    <div class="row">
+        <div class="col-12 h3 text-center my-3">
+            Cart
+        </div>
+        <div class="col-12 col-lg-1"></div>
+        <div class="col-12 col-lg-6">
+            {% for menu in menus %}
+            <div class="menucard row item{{menu.id}} item">
+                <div class="col-4">
+                    <img src="{{menu.image}}" alt="">
+                </div>
+                <div class="col-8">
+                    <div class="menu-detail">
+                        <div>
+                            <div class="menu-title">
+                                {{menu.name}}
+                            </div>
+                            <div class="menu-price">
+                                <span class="notranslate">₹</span><span class="price">{{menu.price}}</span>
+                            </div>
+                        </div>
+                        <div id="{{menu.id}}" class="addcart">
+                            <div class="ctrlcart">
+                                <span id="minus">-</span><span id="cartcount">0</span><span id="plus">+</span>
+                            </div>
+                            <div class="add">
+                                ADD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="total">
+                <h5>Total items :</h5>
+                <hr>
+                <div class="price">Price Details : <span class="totalprice">0</span></div>
+                <div class="delivery">Delivery Fee : <span class="text-success">FREE</span></div>
+                <a class="checkout card" href="/checkout"> CheckOut </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block script %}
+<script>
+    updateAddCartButton()
+    totalCartUpdate()
+</script>
+{% endblock script%}

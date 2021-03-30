@@ -1,0 +1,358 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.navbar {
+  background-color: #FF7A00;
+  width: 100%;
+}
+
+.navbar .cartbtn {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .cartbtn i {
+  color: #fff;
+}
+
+.navbar .navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 9px;
+}
+
+.navbar .label-warning[href],
+.navbar .badge-warning[href] {
+  background-color: #c67605;
+}
+
+.navbar #totalcart {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+.cartitems .item {
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.cartitems .menucard {
+  height: 0px;
+  overflow: hidden;
+}
+
+.cartitems .total {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 10px;
+  margin: 10px 2px;
+}
+
+.cartitems .total div {
+  font-size: 1.2rem;
+}
+
+.cartitems .total span {
+  float: right;
+}
+
+.cartitems .total .checkout {
+  padding: 10px 20px;
+  background-color: #FF7A00;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cartitems .empty {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.home .col-12 {
+  height: 50vh;
+}
+
+.home .background {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home .features {
+  height: calc(50vh - 56px);
+  background-color: #2C1E15;
+}
+
+.home .main {
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.home .main div {
+  padding: 15px 0px;
+  margin: 10px 0px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home .main div:nth-child(1) {
+  background-color: #FF7A00;
+  color: white;
+}
+
+.home .main div:nth-child(2) {
+  border: 2px solid #FF7A00;
+  color: #FF7A00;
+}
+
+.home .main a:hover {
+  color: #fff;
+}
+
+.home .login {
+  width: 50%;
+  display: none;
+}
+
+.home .title {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+}
+
+.home .subtitle {
+  font-size: 0.8rem;
+  margin: 5px 0px;
+}
+
+.home .no {
+  padding: 10px;
+  width: 100%;
+  border: 4px solid #FF7A00;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.home .continue {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #FF7A00;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home .back {
+  font-size: 1.2rem;
+  margin: 10px 0px 0px -10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menucard {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 0px;
+  margin: 10px 2px;
+}
+
+.menucard img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.menucard .menu-detail {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menucard .menu-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.menucard .menu-price {
+  opacity: 0.8;
+}
+
+.menucard .addcart {
+  color: #60B246;
+  font-weight: bolder;
+  margin: 10px 0px;
+  padding: 5px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+  width: 70px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.menucard .addcart .ctrlcart {
+  display: none;
+}
+
+.menucard .addcart .ctrlcart #cartcount {
+  margin: 0px 10px;
+}
+
+.order .card {
+  -webkit-box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.order input[type="text"],
+.order textarea {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px 5px;
+  font-size: 1rem;
+}
+
+.order textarea {
+  height: 100px;
+}
+
+.order .orderbtn {
+  background-color: #FF7A00;
+  color: #fff;
+  margin: 20px 10px;
+  width: 40%;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px 20px;
+  float: right;
+  margin-left: auto;
+}
+
+.order .total div {
+  font-size: 1.2rem;
+}
+
+.order .total span {
+  float: right;
+}
+
+.order .total .checkout {
+  padding: 10px 20px;
+  background-color: #FF7A00;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.shopclose {
+  text-align: center;
+  margin-top: calc((100vh - 56px)/2 - (79px/2));
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.banner {
+  height: 200px;
+  background-color: #2C1E15;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.orders .noorders {
+  padding: 50px 50px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.orders .cancelorder {
+  background-color: #F32731;
+  color: white;
+  display: inline;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.error404 {
+  margin-top: calc((100vh - 56px)/2 - (79px/2));
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .navbar .cartbtn {
+    display: block;
+  }
+  .col-12 {
+    height: auto;
+  }
+  .home .background {
+    height: calc(60vh);
+  }
+  .home .menu {
+    height: calc(40vh);
+  }
+  .home .main {
+    width: 80%;
+  }
+  .home .main div {
+    padding: 10px 0px;
+    margin: 5px 0px;
+  }
+  .home .login {
+    width: 80%;
+  }
+  .menucard .menu-title {
+    font-size: 1rem;
+  }
+  .order .card {
+    margin: 10px 5px;
+    padding: 0px 10px;
+  }
+  .order .orderbtn {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

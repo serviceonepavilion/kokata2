@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="home row">
+        <div class="col-12 col-lg-6 background"></div>
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center menu">
+            <div>
+                <div class="title">Enter OTP</div>
+                <form action="/accounts/otpverification/" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="d-none" value="{{mobileno}}" name="mobileno">
+                    <input type="text" class="no" placeholder="OTP" name="otp">
+                    <button class="btn continue">CONTINUE</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-12 features d-none d-lg-block">
+
+        </div>
+    </div>
+</div>
+{% endblock body %}

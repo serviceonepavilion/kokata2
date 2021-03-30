@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="container">
+    <div class="row orders">
+        <div class="h3 col-12 col-lg-12 my-3">
+            Orders in Progress
+        </div>
+        {% for order in orders_inprogress %}
+        <div class="col-12 col-lg-6 item{{menu.id}} ">
+            <div class="menucard row">
+                <div class="col-4">
+                    <img src="{{order.item.image}}" alt="">
+                </div>
+                <div class="col-8">
+                    <div class="menu-detail">
+                        <div>
+                            <div class="menu-title">
+                                {{order.item.name}}
+                            </div>
+                            <div class="menu-price">
+                                Quantity : {{order.quantity}}
+                            </div>
+                            <div class="menu-price">
+                                Totalprice : ₹<span class="price">{{order.totalprice}}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a class="cancelorder" href="/cancel/{{order.id}}">
+                                Cancel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="card noorders">
+            No Orders
+        </div>
+        {% endfor %}
+        <div class="h3 col-12 col-lg-12 my-3">
+            Orders Completed
+        </div>
+        {% for order in completed_orders %}
+        <div class="col-12 col-lg-6 item{{menu.id}} ">
+            <div class="menucard row">
+                <div class="col-4">
+                    <img src="{{order.item.image}}" alt="">
+                </div>
+                <div class="col-8">
+                    <div class="menu-detail">
+                        <div>
+                            <div class="menu-title">
+                                {{order.item.name}}
+                            </div>
+                            <div class="menu-price">
+                                Quantity : {{order.quantity}}
+                            </div>
+                            <div class="menu-price">
+                                Totalprice : ₹<span class="price">{{order.totalprice}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="card noorders">
+            No Orders
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}
